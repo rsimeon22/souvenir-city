@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: 'Rubik';
+  background-color: #dcd0ff;
+}
+
+.logo-container {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+  
+.main-logo {
+  width: 300px; /* Adjust the width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+    
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+    
+#searchInput {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Rubik';
+}
+
+.search-results {
+  list-style-type: none;
+  padding: 0;
+  width: 200px;
+  overflow-y: auto;
+}
+
+.search-results li{
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-results li:last-child{
+  border-bottom: none;
+}
+  
+.icons-container {
+  display: flex;
+}
+    
+.icons-container i {
+  margin: 0 5px; /* Adjust this value for spacing */
+  cursor: pointer;
+  margin-right: 25px;
+}
+  
+.shipping img {
+  width: 75px; /* Adjust the width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+
+.cart img,
+.login img {
+  width: 40px; /* Adjust the width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+
+h1 {
+  text-align: center;
+  color: #762EEA;
+  padding: 50px;
+}
+
+.address {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px auto; /* Center the box and add vertical spacing */
+  max-width: 800px;
+}
+
+strong {
+  color: #762EEA;
+}
+
+hr {
+  border: 1px solid #762EEA;
+  border-radius: 5px;
+  margin: 100px 100px 100px 100px;
+  /*margin-right: 100px;*/
+}
+
+.add-address {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin: 40px auto 40px auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.add-address h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #762EEA;
+}
+
+.add-address input[type="text"],
+.add-address input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-address label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px;
+  background-color: #762EEA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Rubik';
+  width: 100%;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.add-address button:hover {
+  background-color: #5c22c3;
+}
+
+.success-message {
+  color: green;
+  padding: 10px;
+  background-color: #e7ffe7;
+  border: 1px solid #a1d6a1;
+  border-radius: 5px;
+}
+
+.show-address .address button {
+  padding: 10px;
+  background-color: #762EEA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Rubik';
+  width: 100%;
+  text-decoration: none;
+  font-size: medium;
+}
+
+
+/* unique returns page elements */
+
+.dropdown {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Rubik';
+}
+
+.failure-message { /* doesn't work(?) */
+  color: red;
+  padding: 10px;
+  background-color: rgb(255, 220, 220);
+  border: 1px solid rgb(204, 142, 142);
+  border-radius: 5px;
+}
+
+.wak-message {  /* doesn't work(?) */
+  color: blue;
+  padding: 10px;
+  background-color: rgb(212, 212, 255);
+  border: 1px solid rgb(28, 28, 155);
+  border-radius: 5px;
+}

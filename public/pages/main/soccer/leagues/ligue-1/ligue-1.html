@@ -1,0 +1,87 @@
+<?php
+
+session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome!</title>
+<link rel="stylesheet" href="css/ligue-1.css">
+<script src="../../../../../assets/js/search.js"></script>
+  
+<body>
+    
+<div class="logo-container">
+    <a href="../../../../shop-now-redirection.php">
+      <img class="main-logo" src="../../../../top-of-home-page/icons/souvenir-city-logo.png" alt="mylogo">
+    </a>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" onkeyup="filterResults()">
+
+        <ul id="searchResults" class="search-results">
+          <!-- Search results will be displayed here -->
+        </ul>
+      </div> 
+      
+      <div class="icons-container">
+        <a href="../../../../top-of-home-page/view-shipping-info.php">
+          <i class="shipping">
+            <img src="../../../../top-of-home-page/icons/truck-icon.png" alt="shipping">
+          </i>
+        </a>
+        <a href="../../../../top-of-home-page/cart-page.php">
+          <i class="cart">
+            <img src="../../../../top-of-home-page/icons/shopping-cart.png" alt="cart">
+          </i>
+        </a>
+
+        <?php
+          if (isset($_SESSION["userid"])) {
+            echo "<a href='../../../../top-of-home-page/profile-page.php'><i class='login'><img src='../../../../top-of-home-page/icons/user-icon.png' alt='user'></i></a>";
+          }
+          else {
+            echo "<a href='../../../../top-of-home-page/login-page.php'><i class='login'><img src='../../../../top-of-home-page/icons/user-icon.svg' alt='user'></i></a>";
+          }
+        ?>
+        
+      </div>
+</div>
+
+  <div class="welcome-container">
+    <h1>Sélectionner une équipe...</h1>
+  </div>
+
+
+  <div class="grid-container">
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/brest.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/clermont.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/le-havre.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/lens.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/lille.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/lorient.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/lyon.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/marseille.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/metz.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/monaco.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/montpellier.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/nantes.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/nice.png"></a></div>
+    <div class="grid-item"><a href="ligue-1-shop/psg.php"><img src="ligue-1-logos/psg.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/rennes.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/stade-de-reims.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/strasbourg.png"></a></div>
+    <div class="grid-item"><a href="#"><img src="ligue-1-logos/toulouse.png"></a></div>
+  </div>
+
+  <div class="welcome-container">
+    <h1>...ou vous pouvez acheter des produits dérivés de la Ligue 1 !</h1>
+    <div class="grid-item"><a href="ligue-1-shop/ligue-1-shopping.html"><img src="../league-logos/ligue-1.jpg"></a></div>
+  </div>
+
+</body>
+</html>

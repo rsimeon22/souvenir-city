@@ -1,0 +1,403 @@
+body {
+  margin: 0;
+  font-family: 'Rubik';
+  background-color: #dcd0ff;
+}
+
+/*nav bar styles*/
+
+nav {
+  background-color: #762EEA;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 25px;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #762EEA;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+li:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
+
+/* logos and items on the top of the screen */
+
+.logo-container {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+.main-logo {
+  width: 300px; /* Adjust the width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+  
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+  
+#searchInput {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Rubik';
+}
+
+.search-results {
+  list-style-type: none;
+  padding: 0;
+  width: 200px;
+  overflow-y: auto;
+}
+
+.search-results li{
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-results li:last-child{
+  border-bottom: none;
+}
+
+.icons-container {
+  display: flex;
+}
+  
+.icons-container i {
+  margin: 0 15px; /* Adjust this value for spacing */
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.shipping img {
+  width: 75px; /* Adjust the width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+
+.cart img,
+.login img {
+  width: 40px; /* Adjust the width as needed */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #967bb6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Rubik';
+  width: 100%;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+
+h1{
+  font-size: 32px;
+}
+
+h2{
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+
+}
+
+/* sections */
+
+#hero{
+  text-align: center;
+  height: 70vh;
+  margin-bottom: 250px;
+}
+
+#featured-items{
+  height: 70vh;
+  text-align: center;
+  margin-bottom: 250px;
+}
+
+#call-to-action{
+  height: 50vh;
+  text-align: center;
+  margin-bottom: 250px;
+}
+
+#new-items{
+  height: 110vh;
+  text-align: center;
+  margin-bottom: 350px;
+}
+
+/* css for sections */
+
+.hero-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 5%;
+}
+
+.call-to-action-items{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+#cta-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+#cta-list li {
+  color: black; /* Set the color of the list items */
+}
+
+#cta-list li a {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Set the color of the links */
+  font-size: 23px;
+}
+
+#cta-list li a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.featured-items{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 5%;
+}
+
+@media screen and (max-width: 500px) {
+  #featured-items {
+    height: auto; /* Auto height for smaller screens */
+    margin-bottom: 5vw; /* Adjust margin for smaller screens */
+  }
+
+  .featured-items {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust column sizes for smaller screens */
+    gap: 5px; /* Adjust gap for smaller screens */
+    margin: 2.5vw; /* Adjust margin for smaller screens */
+  }
+
+  .grid-item img {
+    max-width: 100px; /* Make images responsive */
+    height: auto; /* Make images responsive */
+  }
+}
+
+.new-items{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  margin: 5%;
+}
+
+/* Styling for the grid items */
+.grid-item {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-items .grid-item img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.featured-items .grid-item img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid-item img {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.call-to-action-items .grid-item {
+  background-color:#dcd0ff;
+  padding: 20px;
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+}
+
+.call-to-action-items .grid-item img {
+  /*background-color:#dcd0ff;*/
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* styling for footer */
+
+footer {
+  display: flex;
+  height: 35vh;
+  background-color: black;
+  color: white;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-item {
+  margin-bottom: 10px;
+  color: white;
+}
+
+a {
+  color:#762EEA;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color:#967bb6;
+  text-decoration: underline;
+}
+
+/* customer service chat css */
+.chat-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 20px 30px;
+  margin: 40px auto 40px auto;
+  text-align: center; /* center contents */
+}
+
+.chat-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #762EEA;
+}
+
+.chat-box label {
+  display: block;
+  margin: 10px 0;
+}
+
+form{
+  padding: 50px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #762EEA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Rubik';
+  width: 100%;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.chat-box button:hover {
+  background-color: #5c22c3;
+}
+
+.dropdown, .response {
+  padding: 10px;
+  width: 75%;
+  font-size: 16px;
+  font-family: 'Rubik';
+}
+
+h3{
+  padding: 25px;
+  color: #762EEA;
+}

@@ -1,0 +1,79 @@
+/* Styles for Index */
+
+body {
+  margin: 0;
+  font-family: 'Rubik';
+  background-color: black;
+}
+
+.welcome-container{
+  text-align: center;
+  color: #dcd0ff;
+  margin-top: 10px;
+  margin-bottom: 75px;
+}
+
+.welcome-container p{
+    font-size: 35px;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.rounded-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #762EEA;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.rounded-button:hover {
+  background-color: #dcd0ff;
+}
+
+.left-container {
+  display: flex;
+  max-width: 1500px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
+.right-container {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 200px;
+}
+
+.text-section-left {
+  flex: 1;
+  padding-right: 20px;
+  color: #fff;
+}
+
+.text-section-left p{
+    font-size: 25px;
+}
+
+.text-section-right {
+  flex: 1;
+  padding-left: 50px;
+  color: #762EEA;
+}
+
+.text-section-right p{
+    font-size: 25px;
+}
